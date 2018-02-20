@@ -1,0 +1,9 @@
+name: Duels
+version: ${project.version}
+main: com.gb6.duels.Duels
+authors: [GB6]
+commands:
+  duels:
+    description: Default command for managing Duels
+  duel:
+    description: Default command for playing Duels

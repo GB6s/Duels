@@ -1,0 +1,18 @@
+prefix: "&bDuels &7>>"
+gui:
+  arena: "Arenas:"
+  kit: "Kits:"
+  setting: "Duel settings"
+messages:
+  invalid-arguments: "&cInvalid arguments please check &f/duels help"
+  arena-created: "&3Arena created!"
+  no-such-arena: "&cNo such arena: %arena%"
+  spawnpoint-set: "&3%arena%'s %index%'s spawnpoint has been set to your location"
+  no-permission: "&cYou do not have permission to use this command"
+  unknown-command: "&cUnknown command"
+  invalid-player: "&cUnknown player: &f%player%"
+  no-requests: "&3You do not have any pending Duel requests."
+  duel-request-sent: "&3Successfully sent a duel request to %player%"
+  duel-request-received: "&3You have received a duel request from %player%"
+  duel-accepted: "&3Successfully accepted the duel from %player%;"
+  arena-removed: "&3You have successfully removed an arena"

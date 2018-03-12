@@ -2,29 +2,32 @@ package com.gb6.duels.utils;
 
 
 import com.gb6.duels.Duels;
-import com.gb6.duels.enums.Setting;
-import com.gb6.duels.managers.CommandManager;
-import com.gb6.duels.objects.ArenaObject;
-import com.gb6.duels.objects.CommandObject;
-import com.gb6.duels.objects.DuelObject;
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.LinkedHashMultimap;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.gb6.duels.builders.inventory.GUI;
+import com.gb6.duels.managers.ConfigurationManager;
+import com.gb6.duels.objects.*;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 import java.util.*;
 
 public interface Constants {
 
-    List<CommandObject> COMMAND_LIST = new ArrayList<>();
-    LinkedList<ArenaObject> ARENA_LIST =  new LinkedList<>();
+    List<Command> COMMAND_LIST = new ArrayList<>();
+    ArrayList<Arena> ARENA_LIST = new ArrayList<>();
+    ArrayList<Kit> KIT_LIST = new ArrayList<>();
+    Map<Player, GUI> GUI_MAP = new HashMap<>();
 
-    Map<UUID, DuelObject> DUEL_MAP = new HashMap<>();
+    Map<UUID, Dueler> DUEL_MAP = new HashMap<>();
+    Map<UUID, PlayerData> PLAYER_DATA = new HashMap<>();
 
     Duels INSTANCE = Duels.getInstance();
 
-    CommandManager COMMAND_MANAGER = new CommandManager();
+    TitleActionBar TAB = new TitleActionBar();
+    ConfigurationManager CFM = new ConfigurationManager();
+    GuiUtilities GUI_UTIL = new GuiUtilities();
 
-    MessageUtilities MSG_UTIL = new MessageUtilities();
+    List<Integer> KIT_SLOTS = Arrays.asList(36, 37, 38, 39, 40, 41, 42, 43, 44, 49, 50, 51, 52);
+    String PREFIX = ChatColor.translateAlternateColorCodes('&', INSTANCE.getConfig().getString("prefix")) + " ";
+
 
 }

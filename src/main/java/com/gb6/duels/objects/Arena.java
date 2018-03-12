@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.gb6.duels.utils.Constants.ARENA_LIST;
 
-public class ArenaObject {
+public class Arena {
     private static final AtomicInteger count = new AtomicInteger(-1);
     @Getter @Setter private String name;
     @Getter @Setter private boolean beingPlayed;
@@ -23,13 +23,13 @@ public class ArenaObject {
     private Location spawnPointOne;
     private Location spawnPointTwo;
 
-    public ArenaObject(String name) {
+    public Arena(String name) {
         this.name = name;
         this.item = GeneralUtilities.getItem(new ItemStack(Material.DIRT), ChatColor.YELLOW + name, Arrays.asList(ChatColor.GRAY + "Click to select this arena."));
         slot = count.incrementAndGet();
     }
 
-    public static Optional<ArenaObject> fromString(String text) {
+    public static Optional<Arena> fromString(String text) {
         return ARENA_LIST.stream().filter(a -> a.getName().equals(text)).findFirst();
     }
 

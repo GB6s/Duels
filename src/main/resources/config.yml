@@ -1,12 +1,7 @@
 prefix: "&bDuels &7>>"
-gui:
-  arena: "Arenas:"
-  kit: "Kits:"
-  setting: "Duel settings"
 messages:
   invalid-arguments: "&cInvalid arguments please check &f/duels help"
-  arena-created: "&3Arena created!"
-  no-such-arena: "&cNo such arena: %arena%"
+  arena-created: "&3Arena created: %arena%"
   spawnpoint-set: "&3%arena%'s %index%'s spawnpoint has been set to your location"
   no-permission: "&cYou do not have permission to use this command"
   unknown-command: "&cUnknown command"
@@ -16,3 +11,24 @@ messages:
   duel-request-received: "&3You have received a duel request from %player%"
   duel-accepted: "&3Successfully accepted the duel from %player%;"
   arena-removed: "&3You have successfully removed an arena"
+  invalid-item: "&cPlease hold an item while executing this command"
+  item-set: "&3Successfully set the item of %arena%"
+  kit-created: "&3Kit created: %kit%"
+  kit-saved: "&3Saved kit: %kit%"
+  arena-already-exists: "&cArena already exists: %arena%"
+  kit-already-exists: "&cKit already exists: %kit%"
+  kit-get: "&3Kit contents have been given to you"
+  kit-set: "&3Kit contents have been set to your inventory contents"
+  duel-countdown: "&e(!) The duel will start in %seconds%s"
+  duel-start: "&e&lFIGHT!"
+  requester-denied: "&c%player%'s has denied your duel request"
+  opponent-denied: "You have denied %player%'s duel request"
+  unknown-kit: "&cUnknown kit: &f%kit%"
+  unknown-arena: "&&cUnknown kit: &f%arena%"
+  kit-removed: "&3Kit successfully removed: &f%kit%"
+  arena-header: "&3Arenas: "
+
+
+duel-settings:
+  countdown-in-sec: 10
+  time-in-min: 5

@@ -1,7 +1,7 @@
 package com.gb6.duels.enums;
 
 
-import com.gb6.duels.objects.DuelObject;
+import com.gb6.duels.objects.Duel;
 import lombok.Getter;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -48,12 +48,12 @@ public enum Setting {
         return enabled ? addGlow(item) : item;
     }
 
-    public boolean isEnabled(Player player) {
-        DuelObject duelObject = DUEL_MAP.entrySet().stream().filter(s -> s.getValue().getRequester().equals(player)).findFirst().orElse(null).getValue();
-        if (duelObject == null) {
+    public boolean isEnabled(Player requester, Player opponent) {
+        Duel duel = DUEL_MAP.get(requester.getUniqueId()).getByOpponent(opponent);
+        if (duel == null) {
             return false;
         }
-        return duelObject.getSettings().contains(this);
+        return duel.getSettings().contains(this);
     }
 
 }

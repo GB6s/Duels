@@ -1,14 +1,13 @@
 package com.gb6.duels.commands;
 
 import com.gb6.duels.enums.Requirement;
-import com.gb6.duels.objects.CommandObject;
+import com.gb6.duels.objects.Command;
+import com.gb6.duels.objects.Message;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
 
-import static com.gb6.duels.utils.Constants.MSG_UTIL;
-
-public class HelpCommand extends CommandObject {
+public class HelpCommand extends Command {
 
     public HelpCommand() {
         super("help", "duels.help", Requirement.PLAYER_CONSOLE);
@@ -16,7 +15,7 @@ public class HelpCommand extends CommandObject {
 
     @Override
     public void execute(CommandSender sender, List<String> args) {
-        MSG_UTIL.getMessageList("help").color().send(sender);
+        new Message("help", true).send(sender);
     }
 
 }
